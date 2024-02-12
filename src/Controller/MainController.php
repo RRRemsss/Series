@@ -10,14 +10,12 @@ class MainController extends AbstractController
     #[Route('/', name: 'app_home', methods: ['GET','POST'])]
 
     public function home() {
-        echo "Coucou";
-        die();
+        return $this ->render('main/home.html.twig');
     }
     #[Route('/test', name: 'app_test', methods: ['GET','POST'])]
 
     public function test() {
-        echo "testounet";
-        die();
+        return $this ->render('main/test.html.twig');
     }
 
 
