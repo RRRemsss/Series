@@ -6,20 +6,28 @@
           content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> {% block title %} Series ! {% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="icon" href="{{ asset('img/icon.png') }}">
 </head>
 <body>
-<header>
-    <h1>Series !</h1>
-    {% include('inc.html.twig') %}
+<div class="container">
+    <header>
+        <h1><img href="{{ path('app_home') }}" src="{{ asset('img/logo.svg') }}" alt="Series !"></h1>
+        {% include('inc/inc.html.twig') %}
 
-</header>
-<main>
-    {% block body %}{% endblock %}
-</main>
-<footer>
-    {% include('inc.html.twig') %}
-    <div> &copy; {{ "now" | date("Y") }} Series !</div>
-</footer>
-
+    </header>
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+    <footer>
+        {% include('inc/inc.html.twig') %}
+        <div> &copy; {{ "now" | date("Y") }} Series !</div>
+    </footer>
+</div>
 </body>
 </html>
