@@ -7,12 +7,12 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/', name: 'app_home', methods: ['GET','POST'])]
+    #[Route('/', name: 'app_home', methods:['GET'])]
 
     public function home() {
         return $this ->render('main/home.html.twig');
     }
-    #[Route('/test', name: 'app_test', methods: ['GET','POST'])]
+    #[Route('/test', name: 'app_test', methods:['GET'])]
 
     public function test() {
         $serie = [
